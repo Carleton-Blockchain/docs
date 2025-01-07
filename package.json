@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "NODE_OPTIONS='--max-old-space-size=4096' next build",
     "dev": "next dev",
     "start": "next start",
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@orama/tokenizers": "^3.0.4",
     "fumadocs-core": "14.7.1",
     "fumadocs-mdx": "11.2.3",
     "fumadocs-ui": "14.7.1",
