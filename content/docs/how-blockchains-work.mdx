@@ -10,7 +10,7 @@ Resources Used:
 
 <Cards>
   <Card title="Bitscan" href="https://btcscan.org/" />
-  <Card title="Anders Brownworth Visual" href="https://andersbrownworth.com/blockchain/hash" />
+  <Card title="Anders Brownworth Blockchain Visual" href="https://andersbrownworth.com/blockchain/hash" />
 </Cards>
 
 
@@ -25,13 +25,20 @@ Resources Used:
 Regardless if the input data is 1 char or an entire library, a unique has will be generated
 SHA-256(Secure Hash Algorithm 256-bit) produces a fixed-size 256-bit hash value. Since a bit has two possible states (0/1) the total number of possible hash values is:
 
-'''math
-2^256 possibilities
-'''
-
 ```math
-c = \pm\sqrt{a^2 + b^2}
+2^{256} or \space \text{possibilities} \space or \space 1.1579209 \times 10^{77} \space  \text{combinations}
 ```
+
+According to [Bitbo](https://bitbo.io/how-many-users), there is reportedly 200 million active Bitcoin addresses.
+
+The chances you randomly guess/brute force a seed phrase is about:
+```math
+8.6 \times 10^{-78}
+```
+
+To put that into perspective, the odds you win the Powerball lottery about 1 in 292 million. Meaning you are 3.98 x 10^68 times more likely to win the lottery than it is to guess a seed phrase.
+
+> TLDR: The odds someone hacks your Bitcoin address through guessing/brute force is essentially 0.
 
 This property ensures that data within the blockchain cannot be tampered with undetected. You modify 1 character the and the digital fingerprint changes. 
 
