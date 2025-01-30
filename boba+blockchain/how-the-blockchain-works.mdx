@@ -1,0 +1,89 @@
+---
+title: How the Blockchain works
+description: Welcome the first Carleton Blockchain technical crash-course. Over the next 4 lessons, we will be diving deep on the technology being built on top of blockchains.
+---
+
+# What is a Blockchain?
+
+Resources Used:
+
+<Cards>
+  <Card title="Bitscan" href="https://btcscan.org/" />
+  <Card
+    title="Anders Brownworth Blockchain Visual"
+    href="https://andersbrownworth.com/blockchain/hash"
+  />
+</Cards>
+
+> TLDR : Imagine a blockchain is like an append only, singly linked-list that anyone in the world can see.
+
+# Key Concepts
+
+<Steps>
+  <Step title="Hash">
+    ## Hash
+    A hash is a fingerprint of some digital data.
+
+    Regardless if the input data is 1 char or an entire library, a unique hash will be generated. SHA-256 (Secure Hash Algorithm 256-bit) produces a fixed-size 256-bit hash value.
+    ```math
+    2^{256} = 1.1579209 \times 10^{77} \space \text{combinations}
+    ```
+
+    According to [Bitbo](https://bitbo.io/how-many-users), there is reportedly 200 million active Bitcoin addresses.
+
+    The chances you randomly guess/brute force a seed phrase is about:
+    ```math
+    1/8.6 \times 10^{-78}
+    ```
+
+    > TLDR: The odds someone hacks your Bitcoin address through guessing/brute force is essentially 0.
+
+    <Frame>
+      <img src="/images/img/hash.png" />
+    </Frame>
+
+  </Step>
+
+  <Step title="Block">
+    ## Block
+    A block is a container that holds a list of transactions or data records.
+
+    ### Components
+    - **Data**: Transactions or records that the block stores
+    - **Nonce**: A value used in mining to find a valid hash
+    - **Hash**: Digital signature combining block number, data, previous block's hash, nonce, and timestamp
+
+    <Frame>
+      <img src="/images/img/block.png" />
+    </Frame>
+
+  </Step>
+
+  <Step title="Blockchain">
+    ## Blockchain
+    A chain of blocks that are cryptographically linked together.
+
+    Blockchains are "immutable" because changing ANY data in a block will:
+    - Change the hash of that block
+    - Invalidate all subsequent blocks
+    - Each block can hold ~4,000 transactions (1MB limit)
+
+    <Frame>
+      <img src="/images/img/blockchain.png" />
+    </Frame>
+
+  </Step>
+
+  <Step title="Distributed System">
+    ## Distributed System
+    The network is distributed, meaning:
+    - Anyone can see the blockchain
+    - The network accepts the majority consensus
+    - The longest chain is typically considered valid
+
+    <Frame>
+      <img src="/images/img/distributed.png" />
+    </Frame>
+
+  </Step>
+</Steps>

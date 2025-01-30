@@ -1,0 +1,102 @@
+---
+title: Birth of Bitcoin
+description: The origin and early history of Bitcoin
+---
+
+On October 31, 2008, an individual or group using the pseudonym Satoshi Nakamoto released the Bitcoin whitepaper titled "Bitcoin: A Peer-to-Peer Electronic Cash System" on a cryptography mailing list called the Metzdowd Cryptography Mailing List.
+
+<Card
+  title="Bitcoin: A Peer-to-Peer Electronic Cash System"
+  href="https://bitcoin.org/bitcoin.pdf"
+/>
+
+This whitepaper includes 12 sections, but we will focus on the 5 most fundamental aspects that form the foundation of Bitcoin:
+
+1. Electronic Cash System - How Bitcoin enables peer-to-peer transactions without intermediaries
+2. Transactions - The building blocks of Bitcoin using digital signatures
+3. Timestamp Server & Proof-of-Work - How consensus is achieved and secured
+4. Network Architecture - How the network operates and verifies transactions
+5. Incentives & Mining - The economic model that keeps the network running
+
+<Steps>
+  <Step title="Electronic Cash System">
+    Current financial markets rely on financial middlemen - when transacting online with strangers, you must rely on third parties like banks.
+
+    A peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without going through a financial institution.
+
+    Bitcoin focuses on building trustless systems built on top of computer science versus traditional trust-based systems.
+
+    <Frame>
+      <img src="/images/graph/graph.jpg" />
+    </Frame>
+
+  </Step>
+
+  <Step title="Transactions">
+    Transactions are the fundamental building blocks of the Bitcoin network, utilizing digital signatures for security.
+
+    Each transaction relies on two key components:
+    - Public keys: Function like an email address for receiving bitcoin and viewing balances
+    - Private keys: Act as a password to control funds and sign transactions
+
+    Digital signatures ensure:
+    - Only the rightful owner can spend their bitcoin
+    - Transactions cannot be forged or tampered with
+    - All transactions are publicly verifiable
+
+  </Step>
+
+  <Step title="Timestamp Server & Proof-of-Work">
+    The Bitcoin network uses Proof of Work and timestamp servers to validate transactions and achieve consensus:
+
+    Timestamp Server:
+    - Creates an immutable chronological order of transactions
+    - Each block contains a timestamp and link to previous block
+    - Forms an unbroken chain of transaction history
+
+    Proof of Work:
+    - Requires significant computational effort to create blocks
+    - One CPU equals one vote in the network
+    - The longest chain represents the network consensus
+    - Makes the system computationally expensive to attack
+
+  </Step>
+
+  <Step title="Network Architecture">
+    The Bitcoin network operates on a distributed peer-to-peer model:
+
+    Key Components:
+    - Nodes maintain and verify the complete transaction history
+    - New transactions are broadcast to all nodes
+    - Each node collects transactions into blocks
+    - Nodes accept only valid blocks and transactions
+    - Nodes express acceptance by working on the next block
+
+    Network Rules:
+    - All nodes operate under the same protocol
+    - Invalid transactions are rejected automatically
+    - The longest valid chain is always accepted as truth
+
+  </Step>
+
+  <Step title="Incentives & Mining">
+    The network is secured through economic incentives:
+
+    Mining Process:
+    - Miners validate transactions and create new blocks
+    - Complex mathematical problems must be solved
+    - Successful miners receive newly created bitcoins
+    - Block rewards incentivize honest participation
+
+    Economic Model:
+    - Mining requires significant investment in hardware
+    - Energy costs create natural economic barriers
+    - Miners are incentivized to protect network value
+    - Attack costs exceed potential profit
+
+    <Frame>
+      <img src="/images/meme/mining.png" />
+    </Frame>
+
+  </Step>
+</Steps>
