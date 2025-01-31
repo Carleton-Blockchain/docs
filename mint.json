@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Workshop Docs",
-  "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
-  },
+  "name": "Carleton Blockchain",
   "favicon": "/favicon.svg",
+  "logo":{
+    "dark": "/logo/docs1.png",
+    "light": "/logo/dark.png"
+  },
   "colors": {
     "primary": "#4A4F8C",
     "light": "#7B89B8",
