@@ -46,15 +46,15 @@
   "navigation": [
     {
       "group": "Get Started",
-      "pages": ["Introduction"]
+      "pages": ["introduction"]
     },
     {
       "group": "Boba and Blockchain",
       "pages": [
-        "boba+blockchain/Intro",
-        "boba+blockchain/Origins",
+        "boba+blockchain/intro",
+        "boba+blockchain/origins",
         "boba+blockchain/Birth-of-Bitcoin",
-        "boba+blockchain/How-the-Blockchain-works"
+        "boba+blockchain/how-the-blockchain-works"
       ]
     }
   ],
