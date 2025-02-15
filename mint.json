@@ -54,7 +54,8 @@
         "boba+blockchain/intro",
         "boba+blockchain/origins",
         "boba+blockchain/Birth-of-Bitcoin",
-        "boba+blockchain/how-the-blockchain-works"
+        "boba+blockchain/how-the-blockchain-works",
+        "boba+blockchain/recap"
       ]
     }
   ],
