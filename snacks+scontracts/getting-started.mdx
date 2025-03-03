@@ -1,0 +1,105 @@
+---
+title: Pre-requisites?
+description: "Lets deploy your first smart contract"
+---
+
+<Steps>
+  <Step title="Connect wallet to testnet">
+    For the purposes of our demo, we are going to complete all operations on _Testnet_. 
+    Mainnet is real. You are transacting with real currencies etc. On Testnet is a sandbox environment 
+    and duplicate of Mainnet. As the name suggests, it provides developers with a sandbox environment to
+    test code.
+
+    <Tabs>
+      <Tab title="Open Metamask">
+        <img height="25" src="/images/meta/meta0.png" />
+      </Tab>
+
+      <Tab title="Open Network Tab">
+        <img height="25" src="/images/meta/meta1.png" />
+      </Tab>
+
+      <Tab title="Select Sepolia Testnet">
+        <img height="25" src="/images/meta/meta2.png" />
+      </Tab>
+    </Tabs>
+
+  </Step>
+
+  <Step title="Fund Wallet">
+    Since it's a testnet, funds are free. However, since we are simulating a real
+    environment, actions on-chain will still require gas. That is why we need to
+    fund in. Take your Sepolia public address and put it into [Google Web3
+    Faucet](https://cloud.google.com/application/web3/faucet/ethereum/sepolia)
+
+    <Tabs>
+      <Tab title="Receive">
+        <img height="25" src="/images/meta/meta3.png" />
+      </Tab>
+      <Tab title="Copy">
+        <img height="25" src="/images/meta/meta4.png" />
+      </Tab>
+    </Tabs>
+
+  </Step>
+
+<Step title="Grab private key">
+  Walkthrough on where to grab your private keys
+  <Tabs>
+    <Tab title="Home">
+      <img src="/images/pk/pk1.png" />
+    </Tab>
+    <Tab title="Accounts">
+      <img src="/images/pk/pk2.png" />
+    </Tab>
+    <Tab title="Account Settings">
+      <img src="/images/pk/pk3.png" />
+    </Tab>
+    <Tab title="Show priv key">
+      <img src="/images/pk/pk4.png" />
+    </Tab>
+    <Tab title="Enter password">
+      <img src="/images/pk/pk5.png" />
+    </Tab>
+    <Tab title="Hold">
+      <img src="/images/pk/pk6.png" />
+    </Tab>
+    <Tab title="Copy">
+      <img src="/images/pk/pk7.png" />
+    </Tab>
+  </Tabs>
+</Step>
+
+<Step title="Create env file in Foundry project">
+  It's good practice to keep sensitive info such as private keys hidden in env
+  files.
+
+```markdown {1}
+PRIVATE_KEY=<YOUR_PRIVATE_KEY>
+```
+
+</Step>
+
+<Step title="Wallet Private Key">
+  Your private keys are used to sign transactions on the blockchain. When we are
+  deploying a contract on-chain, we are the ones signing off on this action.
+</Step>
+
+<Step title="RPC Node">
+  RPC nodes act as the bridge between your code and the actual blockchain. We
+  can get a free one right [here](https://ethereum-sepolia-rpc.publicnode.com).
+
+```markdown {2}
+PRIVATE_KEY=<YOUR_PRIVATE_KEY>
+RPC_URL=https://ethereum-sepolia-rpc.publicnode.com
+```
+
+Now lets run source .env to update your load your env file into your project
+
+```markdown
+source .env
+```
+
+</Step>
+
+</Steps>

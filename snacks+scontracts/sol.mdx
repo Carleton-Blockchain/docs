@@ -1,4 +1,65 @@
 ---
-title: Introduction to Solidity
-description: "What is Solidity?"
+title: Intro to Foundry + Solidity
+description: "What is Foundry and Solidity anyways?"
 ---
+
+Solidity a high level programming language that is used to create smart contracts, mainly for Ethereum.
+It resembles Java and Javascript.
+
+Start by changing into the directory we want to create our foundry project
+
+```
+forge init --template https://github.com/foundry-rs/forge-template sc_demo
+cd sc_demo
+```
+
+Below is a general overview of what the project contains:
+
+```mermaid
+flowchart TD
+    Foundry[Foundry Project] --> src[src/]
+    Foundry --> test[test/]
+    Foundry --> script[script/]
+    Foundry --> lib[lib/]
+    Foundry --> foundrytoml[foundry.toml]
+
+    src --> contracts[Smart Contracts .sol]
+    test --> testfiles[Test Files _test.sol]
+    script --> deployments[Deployment Scripts]
+    lib --> dependencies[Dependencies]
+
+    subgraph Key Components
+        src[src/ - Source Contracts]
+        test[test/ - Test Files]
+        script[script/ - Deployment Scripts]
+        lib[lib/ - External Libraries]
+        foundrytoml[foundry.toml - Config File]
+    end
+
+    style Foundry fill:#f9f,stroke:#333
+    style Key Components fill:#f5f5f5,stroke:#333
+```
+
+Let's navigate to `src/Counter.sol`
+You will find a starter template.
+
+```Solidity
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.13;
+
+contract Counter {
+    uint256 public number;
+
+    function setNumber(uint256 newNumber) public {
+        number = newNumber;
+    }
+
+    function increment() public {
+        number++;
+    }
+}
+```
+
+Now to interact with this project, we will need to first deploy the contract first.
+
+However, theres a few steps we need to undertake before we can actually deploy the contract.

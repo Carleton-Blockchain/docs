@@ -1,0 +1,55 @@
+---
+title: Deploying and Calling contracts?
+description: "Lets deploy your first smart contract"
+---
+
+Now that all the setup is complete, we can move onto deploying and interacting with contracts.
+
+While in the Foundry project directory, you can deploy your contract using the `forge create` command. Here's how to deploy a Counter.sol contract:
+
+```
+forge create --rpc-url $RPC_URL \
+--private-key $PRIVATE_KEY \
+src/Counter.sol:Counter
+```
+
+The command breakdown:
+
+- `forge create`: The command to deploy a contract
+- `--rpc-url`: Your network's RPC URL
+- `--private-key`: Your wallet's private key (never share this!)
+- `src/Counter.sol:Counter`: The path to your contract file and the contract name after the colon
+
+### Importance of Dry Runs
+
+This will generate a build version of the contract. This is always good to run before actually deploying
+onto blockchain in order to see what if command has bugs but more importantly
+save money. If you deployment, you will still pay gas fees.
+
+After a successful
+
+After successful deployment, Forge will output the contract's address. Save this address as you'll need it for future interactions!
+
+### Real Run
+
+To put the transaction on Testnet, we will need to add the `--broadcast` flag at the end of the function.
+
+```
+forge create --rpc-url $RPC_URL \
+--private-key $PRIVATE_KEY \
+src/Counter.sol:Counter --broadcast
+```
+
+The output will resemble this
+
+```markdown
+Deployer: 0xbb6545183E3cF15Fc8caCcCef0d40976579fbD35
+Deployed to: 0x0fDd28683A2D282c963f42b89408dcA529F6DB78
+Transaction hash: 0xe004f68c94e0a6db38a56e609ddec49e75f5a8fcaa0a4cabd91035c6b27501b9
+```
+
+- `Deployer` -> Your public address
+- `Deployed` to -> Deployed contract address
+- `Transaction hash` -> Transaction that we just signed above ^
+
+Put this into [Sepolia Ether Scan](https://ethereum-sepolia-rpc.publicnode.com/) to analyze the transaction.

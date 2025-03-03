@@ -64,7 +64,9 @@
         "snacks+scontracts/intro",
         "snacks+scontracts/smart-contracts",
         "snacks+scontracts/evm",
-        "snacks+scontracts/sol"
+        "snacks+scontracts/sol",
+        "snacks+scontracts/getting-started",
+        "snacks+scontracts/interacting"
       ]
     }
   ],
