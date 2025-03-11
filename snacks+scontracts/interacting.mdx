@@ -48,4 +48,28 @@ Transaction hash: 0xe004f68c94e0a6db38a56e609ddec49e75f5a8fcaa0a4cabd91035c6b275
 - `Deployed` to -> Deployed contract address
 - `Transaction hash` -> Transaction that we just signed above ^
 
-Put this into [Sepolia Ether Scan](https://ethereum-sepolia-rpc.publicnode.com/) to analyze the transaction.
+Put this into [Sepolia Ether Scan](https://ethereum-sepolia-rpc.publicnode.com/) to analyze the transaction and contract hash.
+
+### Interacting with the Smart Contract
+
+It doesn't cost money to view the state of the blockchain. Notice that viewing the blockchain we use call.
+
+```markdown
+cast call 0x0fDd28683A2D282c963f42b89408dcA529F6DB78 "number()" \
+--rpc-url $RPC_URL
+```
+
+```markdown
+cast --to-dec <HEXA-VALUE>
+```
+
+<Note>
+  Changing the state on the blockchain requires paying gas. Viewing does not,
+  hence why we are not signing with our private key
+</Note>
+
+```markdown
+cast send 0x0fDd28683A2D282c963f42b89408dcA529F6DB78 "setNumber(uint256)" 42 \
+--rpc-url $RPC_URL \
+--private-key $PRIVATE_KEY
+```

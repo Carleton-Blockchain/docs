@@ -5,7 +5,7 @@ description: "Introduction to the idea of the Ethereum Virtual Machine"
 
 ### What is a Virtual Machine?
 
-To understand [what a virtual machine](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-virtual-machine), let's briefly talk about physical machines. Physical machines can simply be understood
+To understand [what a virtual machine](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-a-virtual-machine) is, let's briefly talk about physical machines. Physical machines can simply be understood
 as the hardware that runs on your computer.
 
 Imagine EVM as a computer that specializes in handling smart contract transactions as well as defining
@@ -17,3 +17,37 @@ However, unlike physical computers, these computers exist in a software environm
 
 The EVM is a virtual machine that is not bound to a single operating system or location, thus allowing global accessibility for anyone willing to run an Ethereum node.
 Virtual machines are also platform agnostic, allowing compatibility to a wide range of systems, irrespective of the underlying hardware.
+
+## Few things about the EVM
+
+### EVM is a State Machine
+
+A state machine in simple terms is a device that specializes in storing state as well as defining the rules for
+state changes of a particular system.
+
+In other words, every detail on the Ethereum blockchain, i.e., the amount of ERC20 tokens you hold and NFT ownership, are
+technically different states on the network. These states are reducible to a single root hash, which we call the World
+State. This means that when anything is changed on the Ethereum blockchain, it has to have originated from a transaction.
+
+### EVM as a Quasi-Turing complete machine
+
+Turing complete, named after famous computer scientist Alan Turing, refers to the kind of machine that can solve any
+computational problem, irrespective of the time or memory it takes to do so. (This assumes we have infinite time or memory.)
+
+For instance, programming languages such as Python, C++, Java, HTML+CSS, and MTG are all turing complete systems.
+
+You would assume that Solidity would also be right?
+
+Kinda\*\*
+
+In the world of Ethereum, we cannot have programs that run forever or use infinite memory. While regular computers can halt such
+infinitely programs, we cannot do the same with Ethereum as it's a global computer.
+
+Now in order to avoid the halting issue, there is a type of limitation imposed on every execution on the Ethereum blockchain - Gas.
+
+This means the EVM keeps track of every instruction that is to be executed and charges a particular amount of Gas fees (in ETH) for every computation
+or storage being used in the transaction.
+
+Gas is a reflection of the amount of state being changed.
+
+Why is the EVM Quasi-Turing complete and not just Turing-Complete? A system is considered Turing-complete if it can simulate any Turing machine, which assumes the availability of unlimited computational resources (time and memory). The EVM has all the necessary computational capabilities to be Turing-complete, but it deliberately implements a gas mechanism that places an upper bound on the number of computational steps that can be executed in a single transaction. This makes it "quasi-Turing complete" - it has the computational power of a Turing machine, but with practical limitations enforced through the gas mechanism to ensure transactions cannot run indefinitely.
