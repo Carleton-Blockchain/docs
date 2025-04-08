@@ -68,7 +68,18 @@
         "snacks+scontracts/getting-started",
         "snacks+scontracts/interacting",
         "snacks+scontracts/fun",
-        "snacks+scontracts/tldr"
+        "snacks+scontracts/tldr",
+        "snacks+scontracts/recap"
+      ]
+    },
+    {
+      "group": "AI Agents on NEAR",
+      "pages": [
+        "agents/getting-started",
+        "agents/differentiators",
+        "agents/llms",
+        "agents/decentralization",
+        "agents/nearai"
       ]
     }
   ],
